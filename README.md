@@ -9,12 +9,30 @@ Microsoft Hololens Data Visualization
 
 [The Holographic Academy](https://developer.microsoft.com/en-us/windows/holographic/academy) - The Holographic Academy is a space for learning. We help the best and brightest teams transform the world through best-in-class HoloLens experiences. 
 
+[HoloToolkit](https://github.com/Microsoft/HoloToolkit) - The HoloToolkit is a collection of scripts and components intended to accelerate the development of holographic applications targeting Windows Holographic.
+
 [HoloToolkit-Unity](https://github.com/Microsoft/HoloToolkit-Unity) This is effectively part of the existing HoloToolkit, but this is the repository that will contain all Unity specific components. The HoloToolkit is a collection of scripts and components intended to accelerate development of holographic applications targeting Windows Holographic.
+
+[HoloLens Companion Kit](https://github.com/davidkline-ms/HoloLensCompanionKit) - HoloLens Companion Kit -- This is a toolkit style repo for code bits and components that do not run on HoloLens but pair with HoloLens to build experiences. HoloLensCompanionKit contains the following feature areas:
+-    [Holographic Remoting Host](https://github.com/davidkline-ms/HoloLensCompanionKit/blob/master/RemotingHostSample/README.md)
+-    [KinectIPD](https://github.com/davidkline-ms/HoloLensCompanionKit/blob/master/KinectIPD/README.md)
+
 
 # Input Devices Kinect
 
+[Kinect Developer Site](https://developer.microsoft.com/en-us/windows/kinect)
+
 [dx11-pointcloud](https://github.com/letmp/dx11-pointcloud)
 
+[KinectIPD](https://github.com/davidkline-ms/HoloLensCompanionKit/blob/master/KinectIPD/README.md)
+
+[RoomAlive Toolkit](https://github.com/Kinect/RoomAliveToolkit) - The RoomAlive Toolkit calibrates multiple projectors and cameras to enable immersive, dynamic projection mapping experiences such as RoomAlive. It also includes a simple projection mapping sample.
+
+[Joint Orientation Basics](https://github.com/Kinect/samples) - Joint Orientation Basics for Unity - This sample, written in C# for Unity 5, demonstrates how to use data provided by Body.JointOrientations collection. Shows a skeleton that represents a hierarchical model of all joints. Each joint is visualized to show all quaternion values.
+
+[Kinect for Windows Samples](https://github.com/MSOpenTech/Kinect-for-Windows-Samples) - This repository contains samples submitted by the Kinect for Windows Developer Community. Submitters intend to help fellow Developers hit the ground running while creating Kinect apps for Windows.
+
+[Kinect Common Bridge](https://github.com/MSOpenTech/KinectCommonBridge) - Kinect Common Bridge is a complement to the Kinect for Windows SDK that makes it easy to integrate Kinect scenarios in creative development libraries and toolkits.
 
 # Input Devices Other
 
@@ -35,11 +53,19 @@ Microsoft Hololens Data Visualization
 -    Support for gaze interactions.
 -    Support for voice controls.
 
+[HoloLensDX3M](https://github.com/dngoins/HoloLensDX3M) - HoloLens Direct X Models Mesh and Materials Toolkit is a Windows Runtime Component project which makes it easy to import Models inside DirectX and SharpDX projects for use inside of HoloLens, Holographic, and 3D based DirectX UWP applications.
+
+[HololensDXTutorials](https://github.com/dngoins/HololensDXTutorials) - Hololens DirectX Tutorials in C# and C++
+
 # Utils
 
 [Hololens_Share](https://github.com/lgs777/Hololens_Share) - Hololens Network Share
 
 # Demo Apps
+
+[Holo Tag Recognition](https://github.com/anderm/holo-tag-recognition) - An example on how you can identify specific tags in your environment with HoloLens. The code is based on the blog post: http://www.andrei-ermilov.net/virtual-reality/identifying-tags-in-3d-space-with-hololens/. Please note it does not work in the emulator, you will need a HoloLens device to deploy this solution. 
+
+[Holo Assisted Training](https://github.com/anderm/holo-assisted-training) - A holographic assembly line training prototype based on Microsoft HoloLens. In this demo, you are instructed on how to assemble a few parts into an engine. Make sure you are fast and don’t make mistakes! You will receive a final score based on your performance.
 
 [Hololens_SpatialMapping](https://github.com/lgs777/Hololens_SpatialMapping)
 
@@ -106,12 +132,23 @@ Microsoft Hololens Data Visualization
 [DesertShooterVR](https://github.com/ActiveNick/DesertShooterVR) - Sample first-person-style shooter game for virtual and mixed reality. The goal is to demonstrate how to create a Virtual Reality-style experience using the Microsoft HoloLens. This is inspired by the kind of semi-immersive reality found in other projects like the HoloTour. HoloLens-based "VR" also has the advantage of allowing room-scale movement without any separate tracking equipment. The military base in this sample is actually quite huge and it would otherwise be very hard (i.e. impossible) to track the user accurately as they walk around the base if you had to install external tracks (e.g. HTC Vive) and if the user was tethered to a PC. You'll need a "convention center"-size space to truly walk all over the map, but most of the action is meant to be played from the center of the map. This is a work in a progress that I am sharing publicly as I add features. The latest version was built in Unity 5.5.0b10 (Preview).
 ![](https://github.com/ActiveNick/DesertShooterVR/raw/master/Screenshots/Screen01-ElevatedEditorView.JPG)
 
+[Holo-Roll-a-Ball](https://github.com/ActiveNick/Holo-Roll-a-Ball) - Holo-Roll-a-Ball is a HoloLens version of the starter tutorial for Unity with adapted features. This is a work in progress. The latest version was built in Unity 5.5.0b6 (Preview).
+-    Playing board floats in front of the user when the game starts
+-    Move the board with your gaze and tap to lock in place
+-    Move the player ball with an Xbox One S Bluetooth controller, or the WASD / arrow keys on a Bluetooth keyboard
+-    Pick-up yellow cubes around the game board to score points, without falling off the board. If the ball falls off, it'll drop to the physical floor where the board is placed
+-    Show a basic UI for scoring & end of game
+-    Say the voice command "Reset Game" out loud to reset the player ball to the center of the board
+-    Show or hide the spatial mesh of your environment with the "display mesh" and "hide mesh" voice commands
+-    Ambient spatial sound during the game
+-    NOTE: I deliberately did NOT add walls to make the game more challenging.
+-    The current UI implementation follows the basic Unity UI created in the Roll-a-Ball tutorial from Unity. It's basic for standard games, but doesn't work by default in VR and Mixed Reality projects. I set the UI Canvas Render Mode to Main Camera (Camera) which works in VR & HoloLens, but again isn't ideal. My next goal is to add a better Spatial UI in a future version.
+-    I was initially forced to play the initial version of Holo-Roll-a-Ball with a Bluetooth keyboard due to Unity-HTP issues, but I added support for the Xbox One S controller via a plugin. I will eventually remove the plugin and upgrade to the full Input Manager in Unity to support all Bluetooth controllers for a better experience.
+![](https://github.com/ActiveNick/Holo-Roll-a-Ball/raw/master/Screenshots/GameBoard01.jpg)
 
+[SamplyGame-Hololens](https://github.com/drasticactions/SamplyGame-Hololens) - A re-implementation of SamplyGame (https://github.com/xamarin/urho-samples/tree/master/SamplyGame) for Microsoft Hololens
 
-
-
-
-
+![](https://github.com/xamarin/urho-samples/raw/master/SamplyGame/Screenshots/Video.gif)
 
 
 
